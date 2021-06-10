@@ -2,7 +2,7 @@ import glob
 
 import cv2
 import numpy as np
-from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip  #
+from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip  # planning to do more than just this with moviepy later :)
 
 from helpers import frame_to_time
 
