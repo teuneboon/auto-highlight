@@ -12,6 +12,7 @@ DEATH_TEXT_PIXELS = [
     (332, 898),
     (79, 897),
 ]
+# @TODO: define some pixels which should NOT be red to make it more reliable/lava-proof?
 
 # what's the RGB color range we want to detect
 DEATH_TEXT_RGB_RANGE = ([110, 0, 0], [166, 44, 44])
@@ -51,7 +52,7 @@ def main():
                         pixels_detected += 1
 
                 # we can miss two detection pixels
-                if pixels_detected >= len(DEATH_TEXT_PIXELS) - 2:
+                if pixels_detected >= len(DEATH_TEXT_PIXELS) - 1:
                     if not_dead_detect_frames > 5:
                         # if we weren't dead for 5 ranges, and we are now: CLIP THAT
                         death_counter += 1
